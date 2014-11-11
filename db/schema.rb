@@ -17,9 +17,9 @@ ActiveRecord::Schema.define(version: 20141110220510) do
   enable_extension "plpgsql"
 
   create_table "districts", force: true do |t|
-    t.string   "name"
+    t.string   "jurisdiction_name"
+    t.integer  "number"
     t.string   "borough"
-    t.string   "superintendent"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
