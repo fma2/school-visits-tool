@@ -14,12 +14,22 @@ def open(url)
   Net::HTTP.get(URI.parse(url))
 end
 
-page_content = open('http://data.cityofnewyork.us/resource/n3p6-zve2.json')
+districts_data = open('http://data.cityofnewyork.us/resource/g3vh-kbnw.json')
+schools_data = open('http://data.cityofnewyork.us/resource/n3p6-zve2.json')
 
+District.delete_all
 School.delete_all
 
-all_high_schools = JSON.parse(page_content)
-all_high_schools.each do |x|
-	School.create(name: x["school_name"], dbn: x["dbn"], total_students: x["total_students"], lat: x["location_1"]["latitude"],long: x["location_1"]["longitude"], boro: x["boro"], street_address: x["primary_address_line_1"], zip: x["zip"], overview: x["overview_paragraph"], website: x["website"], phone_number: x["phone_number"], grade_span_min: x["grade_span_min"], grade_span_max: x["grade_span_max"], program_highlights: x["program_highlights"] )
+all_districts = JSON.parse(districts_data)
+all_districts.each do |district|
+	district_number = district["jurisdiction_name"].split(" ")[1].to_i
+	district_borough = district["jurisdiction_name"].split(" ")[2]
+	District.create(jurisdiction_name: district["jurisdiction_name"], number: district_number, borough: district_borough )
 end
 
+all_high_schools = JSON.parse(schools_data)
+all_high_schools.each do |school|
+	district = school["dbn"].split("").shift(2).join.to_i
+	district_match = District.find_by(number: district)
+	district_match.schools << School.create(name: school["school_name"], dbn: school["dbn"], total_students: school["total_students"], lat: school["location_1"]["latitude"],long: school["location_1"]["longitude"], boro: school["boro"], street_address: school["primary_address_line_1"], zip: school["zip"], overview: school["overview_paragraph"], website: school["website"], phone_number: school["phone_number"], grade_span_min: school["grade_span_min"], grade_span_max: school["grade_span_maschool"], program_highlights: school["program_highlights"] )
+end
