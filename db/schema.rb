@@ -11,10 +11,55 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141110210351) do
+ActiveRecord::Schema.define(version: 20141110220510) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "districts", force: true do |t|
+    t.string   "name"
+    t.string   "borough"
+    t.string   "superintendent"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "reports", force: true do |t|
+    t.string   "date"
+    t.string   "school"
+    t.string   "dbn"
+    t.string   "purpose"
+    t.text     "comments"
+    t.text     "next_steps"
+    t.text     "additional_info"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+  end
+
+  add_index "reports", ["user_id"], name: "index_reports_on_user_id", using: :btree
+
+  create_table "schools", force: true do |t|
+    t.string   "name"
+    t.string   "dbn"
+    t.string   "total_students"
+    t.string   "lat"
+    t.string   "long"
+    t.string   "boro"
+    t.string   "street_address"
+    t.string   "zip"
+    t.text     "overview"
+    t.string   "website"
+    t.string   "phone_number"
+    t.string   "grade_span_min"
+    t.string   "grade_span_max"
+    t.text     "program_highlights"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "district_id"
+  end
+
+  add_index "schools", ["district_id"], name: "index_schools_on_district_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
