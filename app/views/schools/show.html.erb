@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+
+Name: <%= @school.name %><br>
+DBN: <%= @school.dbn %><br>
+Borough: <%= @school.boro %><br>
+<br>
+Grade Levels: <%= @school.grade_span_min %> to <%= @school.grade_span_max %><br> 
+Street Address: <%= @school.street_address %><br>
+Zip: <%= @school.zip %><br>
+Phone Number: <%= @school.phone_number %><br>
+<br>
+Total students: <%= @school.total_students %><br>
+Program Highlights: <%= @school.program_highlights %><br>
+Overview: <%= @school.overview %><br>
+<br>
+
+Website: <a href="http://<%= @school.website %>"><%= @school.website %></a><br>
+ 
+<%= link_to 'Edit', edit_school_path(@school) %> |
+<%= link_to 'Back', schools_path %>
