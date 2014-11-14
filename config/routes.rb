@@ -1,13 +1,11 @@
 Rails.application.routes.draw do
+  root "users#home"
+  
   resources :districts, :only => [:index, :show] do
     resources :schools, :only => [:index, :show]
   end
   
   resources :reports
-
-  root "users#home"
-
-  get 'welcome/signin'
 
   devise_for :users, :controllers => { registrations: 'registrations' }
 
