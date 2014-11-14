@@ -1,14 +1,38 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>New:</strong>
-  <%= @report.new %>
+  <strong>Date:</strong>
+  <%= @report.date %>
 </p>
 
 <p>
-  <strong>Create:</strong>
-  <%= @report.create %>
+  <strong>DBN:</strong>
+  <%= @report.dbn %>
 </p>
 
+<p>
+  <strong>School:</strong>
+  <%= @report.school %>
+</p>
+
+<p>
+  <strong>Purpose:</strong>
+  <%= @report.purpose %>
+</p>
+
+<p>
+  <strong>What questions?:</strong>
+  <%= @report.comments %>
+</p>
+
+<p>
+  <strong>Next Steps:</strong>
+  <%= @report.next_steps %>
+</p>
+
+<p>
+  <strong>Additional Information:</strong>
+  <%= @report.additional_info %>
+</p>
 <%= link_to 'Edit', edit_report_path(@report) %> |
 <%= link_to 'Back', reports_path %>
