@@ -3,5 +3,5 @@ class School < ActiveRecord::Base
 
 	belongs_to :district
 
-	multisearchable :against => [:name, :dbn, :street_address]
+	# multisearchable :against => [:name, :dbn, :street_address]
 end
