@@ -1,25 +1,13 @@
-<%= form_for(@report) do |f| %>
-  <% if @report.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@report.errors.count, "error") %> prohibited this report from being saved:</h2>
+<%= form_for(@report, role: "form") do |f| %>
+  <h2 class="form-signin-heading"></h2>
+    <%= f.text_field :school, autofocus: true, required: true, placeholder: 'School', class: "form-control" %>
+    <%= f.text_field :dbn, autofocus: true, placeholder: 'DBN', class: "form-control" %> 
+    <%= f.date_field :date, autofocus: true, required: true, class: "form-control" %>
+    <%= f.text_field :purpose, autofocus: true, required: true, placeholder: 'Purpose', class: "form-control" %>
+    <%= f.text_field :comments, autofocus: true, required: true, placeholder: 'What questions, concerns, and/or issues were raised?', class: "form-control" %>
+    <%= f.text_field :next_steps, autofocus: true, required: true, placeholder: 'Next Steps/Follow-Up', class: "form-control" %>
+    <%= f.text_field :additional_info, autofocus: true, required: true, placeholder: 'Anything else?', class: "form-control" %>
+    
 
-      <ul>
-      <% @report.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :new %><br>
-    <%= f.text_field :new %>
-  </div>
-  <div class="field">
-    <%= f.label :create %><br>
-    <%= f.text_field :create %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+  <div><%= f.submit "Submit", class: "btn btn-lg btn-primary btn-block" %></div>
+<% end%>

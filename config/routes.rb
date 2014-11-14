@@ -1,21 +1,19 @@
 Rails.application.routes.draw do
+  root "users#home"
+  
   resources :districts, :only => [:index, :show] do
     resources :schools, :only => [:index, :show]
   end
   
   resources :reports
 
-  root "users#home"
-
-  get 'welcome/signin'
-
   devise_for :users, :controllers => { registrations: 'registrations' }
 
   get '/home' => 'users#home'
 
-  # resources :users do 
-  #   resources :reports
-  # end
+resources :users do 
+  resources :reports
+end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
