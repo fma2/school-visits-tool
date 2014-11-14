@@ -17,8 +17,8 @@ end
 districts_data = open('http://data.cityofnewyork.us/resource/g3vh-kbnw.json')
 schools_data = open('http://data.cityofnewyork.us/resource/n3p6-zve2.json')
 
-District.delete_all
-School.delete_all
+District.destroy_all
+School.destroy_all
 
 all_districts = JSON.parse(districts_data)
 all_districts.each do |district|
