@@ -1,4 +1,4 @@
-<h1>Listing schools</h1>
+<h1>Listing schools in <%= @district.jurisdiction_name %></h1>
 
 <table>
   <thead>
@@ -11,14 +11,10 @@
     <% @schools.each do |school| %>
       <tr>
         <td><%= school.name%></td>
-        <td><%= link_to 'Show', school %></td>
-        <td><%= link_to 'Edit', edit_school_path(school) %></td>
-        <td><%= link_to 'Destroy', school, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', district_school_path(@district.id,school.id) %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New School', new_school_path %>
