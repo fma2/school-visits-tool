@@ -8,7 +8,6 @@ Rails.application.routes.draw do
   root "welcome#signin"
 
   get 'welcome/signin'
-  get 'welcome/home'
 
   devise_for :users
 
