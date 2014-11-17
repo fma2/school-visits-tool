@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     resources :schools, :only => [:index, :show]
   end
   
-  resources :reports
+  # resources :reports
 
   devise_for :users, :controllers => { registrations: 'registrations' }
 
