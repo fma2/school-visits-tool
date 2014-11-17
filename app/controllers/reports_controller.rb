@@ -14,6 +14,7 @@ class ReportsController < ApplicationController
 
   # GET /reports/new
   def new
+    @user = current_user
     @report = Report.new
   end
 
