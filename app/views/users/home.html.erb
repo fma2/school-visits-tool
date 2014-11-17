@@ -3,8 +3,8 @@
     <h1>Welcome!</h1>
     <p class="lead">Select an option:</p>
     <p>
-    	<%= link_to("Report a Visit", new_user_report_path(@user), class: "btn btn-lg btn-success", role: "button") %> 
-    	<%= link_to("View Your Schools", "districts_path", class: "btn btn-lg btn-success", role: "button") %>
+    	<%= link_to("Report a Visit", new_user_report_path(current_user), class: "btn btn-lg btn-success", role: "button") %> 
+    	<%= link_to("View Schools", districts_path, class: "btn btn-lg btn-success", role: "button") %>
     </p>
   </div>
 </div>
