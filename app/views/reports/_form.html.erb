@@ -1,4 +1,4 @@
-<%= form_for(@report, role: "form") do |f| %>
+<%= form_for([@user, @report], role: "form") do |f| %>
   <h2 class="form-signin-heading"></h2>
     <%= f.text_field :school, autofocus: true, required: true, placeholder: 'School', class: "form-control" %>
     <%= f.text_field :dbn, autofocus: true, placeholder: 'DBN', class: "form-control" %> 
