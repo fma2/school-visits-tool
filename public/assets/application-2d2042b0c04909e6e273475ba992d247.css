@@ -1,0 +1,167 @@
+/* Space out content a bit */
+/* line 7, /Users/fma2/programming/school-visit-reports/app/assets/stylesheets/users.css.scss */
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+/* line 15, /Users/fma2/programming/school-visit-reports/app/assets/stylesheets/users.css.scss */
+.header,
+.marketing,
+.footer {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+/* Custom page header */
+/* line 21, /Users/fma2/programming/school-visit-reports/app/assets/stylesheets/users.css.scss */
+.header {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+/* Make the masthead heading the same height as the navigation */
+/* line 25, /Users/fma2/programming/school-visit-reports/app/assets/stylesheets/users.css.scss */
+.header h3 {
+  padding-bottom: 19px;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+}
+
+/* Custom page footer */
+/* line 33, /Users/fma2/programming/school-visit-reports/app/assets/stylesheets/users.css.scss */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+/* Customize container */
+@media (min-width: 768px) {
+  /* line 41, /Users/fma2/programming/school-visit-reports/app/assets/stylesheets/users.css.scss */
+  .container {
+    max-width: 730px;
+  }
+}
+/* line 45, /Users/fma2/programming/school-visit-reports/app/assets/stylesheets/users.css.scss */
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+/* line 50, /Users/fma2/programming/school-visit-reports/app/assets/stylesheets/users.css.scss */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+/* line 54, /Users/fma2/programming/school-visit-reports/app/assets/stylesheets/users.css.scss */
+.jumbotron .btn {
+  padding: 14px 24px;
+  font-size: 21px;
+}
+
+/* Supporting marketing content */
+/* line 60, /Users/fma2/programming/school-visit-reports/app/assets/stylesheets/users.css.scss */
+.marketing {
+  margin: 40px 0;
+}
+
+/* line 63, /Users/fma2/programming/school-visit-reports/app/assets/stylesheets/users.css.scss */
+.marketing p + h4 {
+  margin-top: 28px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  /* Remove the padding we set earlier */
+  /* line 72, /Users/fma2/programming/school-visit-reports/app/assets/stylesheets/users.css.scss */
+  .header,
+  .marketing,
+  .footer {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  /* Space out the masthead */
+  /* line 77, /Users/fma2/programming/school-visit-reports/app/assets/stylesheets/users.css.scss */
+  .header {
+    margin-bottom: 30px;
+  }
+
+  /* Remove the bottom border on the jumbotron for visual effect */
+  /* line 81, /Users/fma2/programming/school-visit-reports/app/assets/stylesheets/users.css.scss */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+/* line 6, /Users/fma2/programming/school-visit-reports/app/assets/stylesheets/welcome.css.scss */
+body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #eee;
+}
+
+/* line 12, /Users/fma2/programming/school-visit-reports/app/assets/stylesheets/welcome.css.scss */
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+/* line 18, /Users/fma2/programming/school-visit-reports/app/assets/stylesheets/welcome.css.scss */
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+
+/* line 21, /Users/fma2/programming/school-visit-reports/app/assets/stylesheets/welcome.css.scss */
+.form-signin .checkbox {
+  font-weight: normal;
+}
+
+/* line 24, /Users/fma2/programming/school-visit-reports/app/assets/stylesheets/welcome.css.scss */
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+
+/* line 33, /Users/fma2/programming/school-visit-reports/app/assets/stylesheets/welcome.css.scss */
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+
+/* line 36, /Users/fma2/programming/school-visit-reports/app/assets/stylesheets/welcome.css.scss */
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+/* line 41, /Users/fma2/programming/school-visit-reports/app/assets/stylesheets/welcome.css.scss */
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
