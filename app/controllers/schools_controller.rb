@@ -13,6 +13,10 @@ class SchoolsController < ApplicationController
   def show
   end
 
+  def search
+    @search_results = School.school_search(params[:search_text])    
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_school
