@@ -4,6 +4,7 @@
   <title>School Visit Reports</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag :defaults %>
 	  <%= csrf_meta_tags %>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
@@ -47,7 +48,7 @@
             <li class="divider"></li>
             <% if user_signed_in? %>
               <li><a>Signed in as <%= current_user.email %></a></li> 
-              <li><%= link_to "Sign out", destroy_user_session_path, method: "delete" %></li>
+              <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
             <% else %>
               <li><%= link_to "Sign in", new_user_session_path %></li>
             <% end %>
