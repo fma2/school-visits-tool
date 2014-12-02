@@ -42,12 +42,12 @@
             <% if user_signed_in? %>
               <li><%= link_to("Report a Visit", new_user_report_path(current_user)) %> </li>
               <li><%= link_to("View Reports", user_reports_path(current_user)) %></li>
-              <li><%= link_to("View Schools",districts_path) %></li>
+              <li><%= link_to("View Schools", districts_path) %></li>
             <% end %>              
             <li class="divider"></li>
             <% if user_signed_in? %>
               <li><a>Signed in as <%= current_user.email %></a></li> 
-              <li><%= link_to "Sign out", destroy_user_session_path, :method => "delete" %></li>
+              <li><%= link_to "Sign out", destroy_user_session_path, method: "delete" %></li>
             <% else %>
               <li><%= link_to "Sign in", new_user_session_path %></li>
             <% end %>
