@@ -33,6 +33,8 @@ gem 'pg_search'
 gem 'unicorn'
 
 gem 'twitter-bootstrap-rails'
+
+gem "d3-rails"
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
